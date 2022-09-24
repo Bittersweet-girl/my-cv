@@ -10,6 +10,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
+    line-height: 22px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -54,7 +55,7 @@ li {
     text-transform: capitalize;
     position: absolute;
     background-color: #053750;
-    top: 87px;
+    top: 81px;
 }
 .aboute{
     padding: 10px 50px;
@@ -65,23 +66,55 @@ li {
 .main-content{
     display: flex;
     flex-direction: row;
+    /* flex-wrap: wrap; */
 }
 .sidebar {
     background-color: #053750;
     color: #E5E5E5;
-    padding: 10px;
+    padding: 0 15px;
+    width: 35%;
 }
 
 /* .sidebar__title {} */
 
-/* .sidebar-list {} */
-
+.sidebar-list {
+    padding-left: 5px;
+}
+.sidebar-list__item::before {
+    content: "";
+    margin-right: 6px;
+    height: 19px;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sidebar-list__item_mail::before{
+    background-image: url(./assets/svg/mail.svg);
+    width: 20px;
+}
+.sidebar-list__item_linkedin::before{
+    background-image: url(./assets/svg/linkedin.svg);
+    width: 20px;
+}
+.sidebar-list__item_telegram::before{
+    background-image: url(./assets/svg/telegram.svg);
+    width: 20px;
+}
+.sidebar-list__item_git::before{
+    background-image: url(./assets/svg/github.svg);
+    width: 20px;
+}
+.sidebar-list__item_discord::before{
+    background-image: url(./assets/svg/discord.svg);
+    width: 20px;
+}
 .sidebar__link {
     color: white;
 }
 
 .main {
-    padding: 20px;
+    padding: 0 20px;
 }
 .main__title{
     background-color: #053750;
@@ -94,7 +127,9 @@ li {
 }
 /* .work {} */
 
-/* .work__title {} */
+.work__title {
+    margin-top: 0;
+}
 
 /* .work__position {} */
 
@@ -125,12 +160,18 @@ li {
 .project__title {
     width: 100%;
 }
+.project-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
 
 .project__img {
     transition: 0.3s;
     transform: scale(1);
-    height: 300px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
 }
 .project__img:hover{
     transform: scale(1.03);
