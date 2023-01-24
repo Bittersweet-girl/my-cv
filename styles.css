@@ -110,6 +110,18 @@ li {
     background-image: url(./assets/svg/discord.svg);
     width: 20px;
 }
+.sidebar-list__item_photo::before{
+    background-image: url(./assets/svg/camera.svg);
+    width: 30px;
+}
+.sidebar-list__item_album::before{
+    background-image: url(./assets/svg/album.svg);
+    width: 30px;
+}
+.sidebar-list__item_needle::before{
+    background-image: url(./assets/svg/scissors.svg);
+    width: 30px;
+}
 .sidebar__link {
     color: white;
 }
